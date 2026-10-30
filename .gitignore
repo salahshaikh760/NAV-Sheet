@@ -6,3 +6,6 @@ screenshots
 artifacts
 .env
 .env.*
+
+# Netlify build output
+dist
