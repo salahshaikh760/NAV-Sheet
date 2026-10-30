@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-bg: #0c1210;
+  --color-surface: #141c18;
+  --color-sheet: #101714;
+  --color-header: #1b2820;
+  --color-gutter: #121a16;
+  --color-fg: #e7f0e8;
+  --color-muted: #8ea196;
+  --color-line: #2a3b32;
+  --color-line-strong: #3d5648;
+  --color-accent: #d6f26a;
+  --color-accent-ink: #14210a;
+  --color-up: #7dffa1;
+  --color-up-bg: #143224;
+  --color-down: #ff8d7a;
+  --color-down-bg: #3a1c18;
+  --color-warn: #f0c36a;
+  --color-warn-bg: #2c2414;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    min-height: 100dvh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  input,
+  button {
+    font-family: inherit;
+  }
+}
+
+.sheet-scroll {
+  scrollbar-color: var(--color-line-strong) transparent;
+}
+
+.sheet-scroll::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+.sheet-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-line-strong);
+  border-radius: 99px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

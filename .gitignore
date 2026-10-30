@@ -1,0 +1,8 @@
+node_modules
+.vercel
+.tanstack
+.node_modules.lock
+screenshots
+artifacts
+.env
+.env.*
